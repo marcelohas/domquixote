@@ -252,6 +252,28 @@ footer {
     margin-top: 3rem;
 }
 
+/* Embedded content containers (Padlet, etc.) */
+.embed-container {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 600px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    border: 3px solid transparent;
+}
+
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -283,6 +305,11 @@ footer {
     main {
         padding: 0 1rem;
     }
+
+    .embed-container {
+        height: 60vh;
+        min-height: 420px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -296,6 +323,10 @@ footer {
     
     .book-card {
         height: 250px;
+    }
+    .embed-container {
+        height: 55vh;
+        min-height: 360px;
     }
 }
 
