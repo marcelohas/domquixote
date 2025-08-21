@@ -72,6 +72,12 @@ main {
     padding: 0 2rem;
 }
 
+.quick-links {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1rem;
+}
+
 .bookshelf {
     background: rgba(255, 255, 255, 0.98);
     border-radius: 25px;
@@ -363,6 +369,10 @@ footer {
     
     main {
         padding: 0 1rem;
+    }
+
+    .quick-links {
+        margin-bottom: 0.5rem;
     }
 
     .embed-container {
