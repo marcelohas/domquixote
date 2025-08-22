@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Of - FliSanta 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos do carrossel (escopo apenas desta página) */
+        .carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            background: #000;
+            height: 520px; /* Altura fixa para uniformizar as imagens */
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            will-change: transform;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            user-select: none;
+            height: 100%;
+        }
+        .carousel-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém proporção e recorta excedente */
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            color: #333;
+            font-size: 26px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+        }
+        .carousel-btn:hover { background: #fff; }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        .carousel-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: rgba(255,255,255,0.6);
+        }
+        .carousel-dot.active { background: #fff; }
+
+        .section-text { max-width: 900px; margin: 0 auto; }
+        .video-wrap { max-width: 900px; margin: 20px auto 40px; }
+        .video-wrap video { width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+        /* Responsivo: altura menor em telas pequenas */
+        @media (max-width: 768px) {
+            .carousel { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎬 Making Of - FliSanta 2025</h1>
+        <p>Um pouco dos bastidores: organização e preparação do espaço</p>
+        <nav class="main-nav">
+            <a href="index.html" target="_blank" rel="noopener noreferrer">Início</a>
+            <a href="apps.html" target="_blank" rel="noopener noreferrer">Apps</a>
+            <a href="escape.html" target="_blank" rel="noopener noreferrer">Escape Room</a>
+            <a href="grandedesafio.html" target="_blank" rel="noopener noreferrer">O Grande Desafio</a>
+            <a href="livros.html" target="_blank" rel="noopener noreferrer">Dom Quixote</a>
+            <a href="venenodigital.html" target="_blank" rel="noopener noreferrer">Veneno Digital</a>
+            <a href="padlet.html" target="_blank" rel="noopener noreferrer">Padlet</a>
+            <a href="makingoff.html" target="_blank" rel="noopener noreferrer">Making Of</a>
+            <a href="cartilhas.html" target="_blank" rel="noopener noreferrer">Cartilhas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bookshelf section-text">
+            <h2>📸 Bastidores</h2>
+            <p>
+                Os alunos estavam preparando o espaço e deixando tudo pronto para a FliSanta 2025. Entre
+                ideias, organização e muita colaboração, registramos alguns momentos desse processo.
+            </p>
+        </section>
+
+        <section class="carousel" aria-label="Galeria de fotos do making of">
+            <button class="carousel-btn prev" aria-label="Anterior" title="Anterior">&#10094;</button>
+            <div class="carousel-track" id="carousel-track">
+                <div class="carousel-slide"><img src="img01 (1).jpg" alt="Alunos preparando o espaço - foto 1"></div>
+                <div class="carousel-slide"><img src="img01 (2).jpg" alt="Alunos preparando o espaço - foto 2"></div>
+                <div class="carousel-slide"><img src="img01 (3).jpg" alt="Alunos preparando o espaço - foto 3"></div>
+                <div class="carousel-slide"><img src="img01 (4).jpg" alt="Alunos preparando o espaço - foto 4"></div>
+                <div class="carousel-slide"><img src="img01 (5).jpg" alt="Alunos preparando o espaço - foto 5"></div>
+                <div class="carousel-slide"><img src="img01 (6).jpg" alt="Alunos preparando o espaço - foto 6"></div>
+                <div class="carousel-slide"><img src="img01 (7).jpg" alt="Alunos preparando o espaço - foto 7"></div>
+                <div class="carousel-slide"><img src="img01 (8).jpg" alt="Alunos preparando o espaço - foto 8"></div>
+                <div class="carousel-slide"><img src="img01 (9).jpg" alt="Alunos preparando o espaço - foto 9"></div>
+                <div class="carousel-slide"><img src="img01 (10).jpg" alt="Alunos preparando o espaço - foto 10"></div>
+                <div class="carousel-slide"><img src="img01 (11).jpg" alt="Alunos preparando o espaço - foto 11"></div>
+                <div class="carousel-slide"><img src="img01 (12).jpg" alt="Alunos preparando o espaço - foto 12"></div>
+                <div class="carousel-slide"><img src="img01 (13).jpg" alt="Alunos preparando o espaço - foto 13"></div>
+                <div class="carousel-slide"><img src="img01 (14).jpg" alt="Alunos preparando o espaço - foto 14"></div>
+                <div class="carousel-slide"><img src="img01 (15).jpg" alt="Alunos preparando o espaço - foto 15"></div>
+                <div class="carousel-slide"><img src="img01 (16).jpg" alt="Alunos preparando o espaço - foto 16"></div>
+                <div class="carousel-slide"><img src="img01 (17).jpg" alt="Alunos preparando o espaço - foto 17"></div>
+                <div class="carousel-slide"><img src="img01 (18).jpg" alt="Alunos preparando o espaço - foto 18"></div>
+                <div class="carousel-slide"><img src="img01 (19).jpg" alt="Alunos preparando o espaço - foto 19"></div>
+                <div class="carousel-slide"><img src="img01 (20).jpg" alt="Alunos preparando o espaço - foto 20"></div>
+                <div class="carousel-slide"><img src="img01 (21).jpg" alt="Alunos preparando o espaço - foto 21"></div>
+                <div class="carousel-slide"><img src="img01 (22).jpg" alt="Alunos preparando o espaço - foto 22"></div>
+                <div class="carousel-slide"><img src="img01 (23).jpg" alt="Alunos preparando o espaço - foto 23"></div>
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo" title="Próximo">&#10095;</button>
+            <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+        </section>
+
+        <section class="video-wrap">
+            <h2>🎥 Vídeo</h2>
+            <video controls muted src="video.mp4"></video>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 FliSanta - Making Of</p>
+    </footer>
+
+    <script>
+        // Carrossel simples com setas e indicadores
+        (function(){
+            const track = document.getElementById('carousel-track');
+            const slides = Array.from(track.children);
+            const btnPrev = document.querySelector('.carousel-btn.prev');
+            const btnNext = document.querySelector('.carousel-btn.next');
+            const dotsWrap = document.getElementById('carousel-dots');
+            const carousel = document.querySelector('.carousel');
+            let index = 0;
+            const AUTOPLAY_MS = 4000;
+            let timer = null;
+
+            function renderDots(){
+                dotsWrap.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'carousel-dot' + (i === index ? ' active' : '');
+                    dotsWrap.appendChild(dot);
+                });
+            }
+            function update(){
+                const width = track.clientWidth;
+                track.style.transform = `translateX(-${index * width}px)`;
+                renderDots();
+            }
+            function prev(){ index = (index - 1 + slides.length) % slides.length; update(); }
+            function next(){ index = (index + 1) % slides.length; update(); }
+            function start(){ stop(); timer = setInterval(next, AUTOPLAY_MS); }
+            function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+
+            btnPrev.addEventListener('click', ()=>{ prev(); start(); });
+            btnNext.addEventListener('click', ()=>{ next(); start(); });
+            window.addEventListener('resize', update);
+
+            // Swipe em dispositivos touch
+            let startX = 0;
+            track.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; stop(); }, {passive:true});
+            track.addEventListener('touchend', (e)=>{
+                const dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) > 40) { dx > 0 ? prev() : next(); }
+                start();
+            });
+
+            // Pausar ao passar o mouse e retomar ao sair
+            carousel.addEventListener('mouseenter', stop);
+            carousel.addEventListener('mouseleave', start);
+
+            // Inicializa
+            renderDots();
+            update();
+            start();
+        })();
+    </script>
+</body>
+</html>
